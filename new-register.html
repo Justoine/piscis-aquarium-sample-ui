@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/stylesz.css">
+      <link rel="icon" type="image/png"href="iconz.png">
+    <script src="https://kit.fontawesome.com/6c183735e3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="regist-form">
+      <h2>Register Here</h2>
+      <br>
+      <br>
+      <form name="registeration" method="post" onsubmit="validate()">
+        <label for="first">First Name</label>
+        <input type="text" name="firstname" id="first" placeholder="Enter first name">
+        <label for="last">Last Name</label>
+        <input type="text" name="lastname" id="last" placeholder="Enter last name">
+        <label for="user">Username</label>
+        <input type="text" name="username" id="user" placeholder="Enter your Username">
+        <label for="e-mail">Email</label>
+        <input type="text" name="email" id="e-mail" placeholder="Enter email adress">
+        <label for="pass">Password</label>
+        <input type="text" name="password" id="pass" placeholder="Enter password">
+        <input type="submit" value="SUBMIT">
+        <a class="butt" href="index.html">Return Home</a>
+      </form>
+    </div>
+    <script>
+      function validate() {
+        var usernem = document.forms["registeration"]["username"].value;
+        var emil = document.forms["registeration"]["email"].value;
+        var pw = document.forms["registeration"]["password"].value;
+        var fist = document.forms["registeration"]["firstname"].value;
+        var las = document.forms["registeration"]["lastname"].value;
+        if(fist === ""){
+          alert("Please enter First Name!");
+        }
+        if(las === ""){
+          alert("Please enter Last Name!");
+        }
+        if(usernem === ""){
+          alert("Please enter Username!");
+        }
+        if(emil === ""){
+          alert("Please enter Email!");
+        }
+        if(pw === ""){
+          alert("Please enter Password!");
+        }
+      }
+    </script>
+    <img class="logoo" src="piscis.png" alt="">
+  </body>
+</html>
